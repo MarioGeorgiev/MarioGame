@@ -1,5 +1,5 @@
 const mario = document.getElementById('mario')
-console.log(mario)
+
 function jump(){   
     if(!mario.classList.contains("jump")){
     mario.classList.add('jump')
@@ -7,6 +7,10 @@ function jump(){
         mario.classList.remove('jump')
     },300)}
 }
+
+let isAlive = setInterval(function(){
+    console.log("CHECK")
+},10)
 
 document.addEventListener("keypress", (ev)=>{
     ev.preventDefault()

@@ -26,9 +26,11 @@
      30% {
         top: 130px;
      }
-
+     30% {
+      top: 100px;
+   }
      50%{
-        top:80px;
+        top:50px;
      }
 
      80%{
@@ -37,4 +39,38 @@
      100%{
         top:150px
      }
+}
+
+#pipe{
+   width: 50px;
+   height: 50px;
+   background-image: url(../img/game-pipe.gif);
+   background-size: 50px 50px;
+   position: relative;
+   top: 100px;
+   left: 1450px;
+   animation: pipe 3.5s infinite linear;
+}
+@keyframes pipe {
+
+      0% {
+         left: 1450px;
+      }
+      20%{
+         left:1160px;
+      }
+   
+      30%{
+         left:1015px;
+      }
+      40%{
+         left:870px
+      }
+      50%{
+         left:725px
+      }
+      100%{
+         left:-10px
+      }
+   
 }
