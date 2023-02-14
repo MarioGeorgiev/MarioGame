@@ -47,6 +47,9 @@
    position: relative;
    top: 110px;
    left: 640px;
+   
+}
+.pipe-anime{
    animation: pipe 1.2s infinite linear;
 }
 @keyframes pipe {

@@ -1,5 +1,6 @@
 const mario = document.getElementById('mario')
 const pipe = document.getElementById('pipe')
+pipe.classList.add('pipe-anime')
 let score = 0;
 function jump(){   
     if(!mario.classList.contains("jump")){
@@ -14,12 +15,16 @@ let isAlive = setInterval(function(){
     let pipeLeft = parseInt(window.getComputedStyle(pipe).getPropertyValue("left"))
     
     if(pipeLeft <50 && pipeLeft>0 && marioTop>=130 ){
-        alert(`Game over: ${score}`)
+        pipe.classList.remove('pipe-anime')
+        confirm(`Game over: ${(score/100).toFixed(0)}`)
+        setTimeout(3000)
+        pipe.classList.add('pipe-anime')
         score=0;
+    }else{
+        setTimeout(score++,1000)
     }
-    if(pipeLeft ==-10){
-        score+=10
-    }
+    console.log(score/100)
+
     
 },10)
 
